@@ -11,12 +11,17 @@ void setup(){
 }
 
 Rocket randomRocket(int index){
-  return new Rocket(0, random(0.5, 2.5), color(255, 0, 0), random(50, width - 50), 
-    height, (int)random(30, 80), random(0.5, 1.5), index);
+  colorMode(HSB, 255);
+  return new Rocket(0, random(0.5, 2.5), color(random(0, 255), 230, 240), random(50, width - 50), 
+    height, (int)random(30, 80), random(0.5, 1.0), index);
 }
 
 void draw(){
   background(30);
+  colorMode(RGB, 255);
+  fill(30, 30, 30, 75);
+  //rect(0, 0, width, height);
+  colorMode(HSB, 255);
   
   for(FireworkObject firework : fireworks){
     if(firework == null)

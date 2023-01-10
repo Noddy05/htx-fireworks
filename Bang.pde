@@ -19,6 +19,7 @@ class Bang implements FireworkObject {
   void update(){
     if((millis() - millis) / 1000.0 >= boomTime){
       fireworks.set(index, randomRocket(index));
+      Rocket rocket = (Rocket)fireworks.get(index);
     }
   }
   
